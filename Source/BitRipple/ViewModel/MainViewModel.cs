@@ -642,7 +642,7 @@ namespace BitRipple.ViewModel
 
 		public void ExecuteOpenManualCommand(object parameter)
 		{
-			System.Diagnostics.Process.Start("http://github.com/backlof/tRSS/blob/master/README.md");
+			System.Diagnostics.Process.Start("http://github.com/backlof/BitRipple/blob/master/README.md");
 		}
 
 		public bool CanOpenManualCommand(object parameter)
