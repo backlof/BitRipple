@@ -1,0 +1,57 @@
+﻿<Window x:Class="BitRipple.View.FeedEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BitRipple.View"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        mc:Ignorable="d"
+        MinHeight="250"
+		MinWidth="240"
+		DataContext="{Binding Path=EditOrCreateFeedViewModel, Source={StaticResource ViewModelLocator}}"
+		Title="{Binding Path=Title}"
+		Height="{Binding Path=Window.Height, Mode=TwoWay}"
+		Width="{Binding Path=Window.Width, Mode=TwoWay}"
+		Top="{Binding Path=Window.Top, Mode=TwoWay}"
+		Left="{Binding Path=Window.Left, Mode=TwoWay}"
+		WindowState="{Binding Path=Window.State, Mode=TwoWay}"
+		>
+
+	<i:Interaction.Triggers>
+		<i:EventTrigger EventName="Closing">
+			<i:InvokeCommandAction Command="{Binding Path=CloseCommand}" />
+		</i:EventTrigger>
+	</i:Interaction.Triggers>
+	
+	<Grid>
+		<GroupBox Header="Feed" Margin="8">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="*" />
+					<RowDefinition Height="Auto" />
+				</Grid.RowDefinitions>
+
+				<Label Grid.Row="0" Content="Name" Style="{StaticResource FormLabel}" />
+				<TextBox Grid.Row="1" Text="{Binding Path=Feed.Title, Mode=TwoWay}" />
+
+				<Label Grid.Row="2" Content="URL" Style="{StaticResource FormLabel}" />
+				<TextBox Grid.Row="3" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Text="{Binding Path=Feed.URL, Mode=TwoWay}"/>
+
+				<WrapPanel Grid.Row="4" HorizontalAlignment="Right" Margin="0,12,0,0">
+					<WrapPanel.Resources>
+						<Style TargetType="{x:Type Button}">
+							<Setter Property="Margin" Value="3,0,3,0" />
+							<Setter Property="Padding" Value="5,3,5,3" />
+						</Style>
+					</WrapPanel.Resources>
+
+					<Button Content="Save" Command="{Binding Path=SaveCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"/>
+					<Button Content="Cancel" Command="{Binding Path=CancelCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}" />
+				</WrapPanel>
+			</Grid>
+		</GroupBox>
+	</Grid>
+</Window>
