@@ -96,6 +96,8 @@
     <Compile Include="Utilities\BindingConverters.cs" />
     <Compile Include="Utilities\BindingHelpers.cs" />
     <Compile Include="Utilities\Static\Errors.cs" />
+    <Compile Include="Utilities\Static\List.cs" />
+    <Compile Include="Utilities\Static\ObservableCollection.cs" />
     <Compile Include="Utilities\Static\Paths.cs" />
     <Compile Include="Utilities\ApplicationSettings.cs" />
     <Compile Include="Utilities\Static\Strings.cs" />

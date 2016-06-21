@@ -11,7 +11,7 @@ namespace BitRipple.Services
     {
         public static bool SameAs(this Torrent compare, Torrent to)
         {
-            return compare.GUID == to.GUID && compare.Published == to.Published && compare.URL == to.URL;
+            return compare.Title == to.Title && compare.GUID == to.GUID && compare.Published == to.Published && compare.URL == to.URL;
         }
     }
 }

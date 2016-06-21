@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.XML" />
@@ -53,9 +56,12 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Functionality\EqualityTests.cs" />
-    <Compile Include="Functionality\FilterTests.cs" />
-    <Compile Include="Functionality\RssTests.cs" />
+    <Compile Include="Utilities\Builders.cs" />
+    <Compile Include="Tests\EqualityTests.cs" />
+    <Compile Include="Tests\FilterTests.cs" />
+    <Compile Include="Tests\RssTests.cs" />
+    <Compile Include="Utilities\Date.cs" />
+    <Compile Include="Utilities\Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

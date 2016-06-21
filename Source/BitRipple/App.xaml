@@ -5,23 +5,23 @@
              xmlns:util="clr-namespace:BitRipple.Utilities"
              DispatcherUnhandledException="Application_DispatcherUnhandledException"
              StartupUri="View/MainWindow.xaml">
-    <Application.Resources>
-        <util:ViewModelLocator x:Key="ViewModelLocator" />
-        <util:DateConverter x:Key="DateConverter" />
-        <util:GridLengthConverter x:Key="GridLengthConverter" />
-        <util:DataGridWidthConverter x:Key="DataGridWidthConverter" />
+	<Application.Resources>
+		<util:ViewModelLocator x:Key="ViewModelLocator" />
+		<util:DateConverter x:Key="DateConverter" />
+		<util:GridLengthConverter x:Key="GridLengthConverter" />
+		<util:DataGridWidthConverter x:Key="DataGridWidthConverter" />
 
-        <Style TargetType="Label" x:Key="FormLabel">
-            <Setter Property="Margin" Value="0,4,0,-2" />
-        </Style>
+		<Style TargetType="Label" x:Key="FormLabel">
+			<Setter Property="Margin" Value="0,4,0,-2" />
+		</Style>
 
-        <Style TargetType="{x:Type GroupBox}">
-            <Setter Property="Padding" Value="8,0,8,8" />
-            <Setter Property="VerticalAlignment" Value="Stretch" />
-        </Style>
+		<Style TargetType="{x:Type GroupBox}">
+			<Setter Property="Padding" Value="8,0,8,8" />
+			<Setter Property="VerticalAlignment" Value="Stretch" />
+		</Style>
 
-        <Style TargetType="TextBlock" x:Key="ImageButtonTextBlock">
-            <Setter Property="Margin" Value="3,0,0,0" />
-        </Style>
-    </Application.Resources>
+		<Style TargetType="TextBlock" x:Key="ImageButtonTextBlock">
+			<Setter Property="Margin" Value="3,0,0,0" />
+		</Style>
+	</Application.Resources>
 </Application>
