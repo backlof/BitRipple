@@ -12,8 +12,7 @@ namespace BitRipple.Services
 	{
 		public List<Torrent> GetDefaultDownloadedTorrents()
 		{
-			return new List<Torrent>(new Torrent[] {
-			});
+			return new List<Torrent>();
 		}
 
 		public WindowBase GetDefaultEditFeedWindow()
@@ -36,7 +35,7 @@ namespace BitRipple.Services
 
 		public List<Feed> GetDefaultFeeds()
 		{
-			return new List<Feed>(new Feed[]
+			return new List<Feed>()
 			{
 				new Feed() { Title = "Movies", URL = "http://www.mininova.org/rss.xml?cat=4"},
 				new Feed() { Title = "Movies - Action", URL = "http://www.mininova.org/rss.xml?sub=1" },
@@ -44,12 +43,12 @@ namespace BitRipple.Services
 				new Feed() { Title = "Books", URL = "http://www.mininova.org/rss.xml?cat=2" },
 				new Feed() { Title = "Music", URL = "http://www.mininova.org/rss.xml?cat=5" },
 				new Feed() { Title = "Tv", URL = "http://www.mininova.org/rss.xml?cat=8" }
-			});
+			};
 		}
 
 		public List<Filter> GetDefaultFilters()
 		{
-			return new List<Filter>(new Filter[] {
+			return new List<Filter>() {
 				new Filter()
 				{
 					Title = "HD filter",
@@ -78,7 +77,7 @@ namespace BitRipple.Services
 					Episode = 1,
 					Season = 1
 				}
-			});
+			};
 		}
 
 		public MainWindowSettings GetDefaultMainWindow()
