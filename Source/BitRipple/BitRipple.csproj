@@ -258,7 +258,9 @@
   <PropertyGroup>
     <PostBuildEvent>rd /s /q "de", "en", "es", "fr", "it", "ja", "ko", "ru", "zh-Hans", "zh-Hant"
 rd /s /q "hu", "pt-BR", "sv", "ro"
-del /s /q "Ninject.xml"</PostBuildEvent>
+del /s /q "Ninject.xml"
+mkdir "$(TargetDir)Assemblies"
+move /y "$(TargetDir)*.dll" "$(TargetDir)Assemblies"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
