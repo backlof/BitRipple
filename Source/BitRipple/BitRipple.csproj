@@ -260,7 +260,8 @@
 rd /s /q "hu", "pt-BR", "sv", "ro"
 del /s /q "Ninject.xml"
 mkdir "$(TargetDir)Assemblies"
-move /y "$(TargetDir)*.dll" "$(TargetDir)Assemblies"</PostBuildEvent>
+move /y "$(TargetDir)*.dll" "$(TargetDir)Assemblies"
+del /s /q "*.pdb"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
