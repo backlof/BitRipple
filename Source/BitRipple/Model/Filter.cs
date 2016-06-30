@@ -27,7 +27,7 @@ namespace BitRipple.Model
 			}
 			set
 			{
-				_Title = value.Trim();
+				_Title = value;
 				onPropertyChanged("Title");
 			}
 		}
@@ -229,7 +229,7 @@ namespace BitRipple.Model
 			set
 			{
 				// Replace all Regex Operators - except the ones I translate
-				_TorrentNameFilter = Strings.ReplaceCharacters(value.Trim(), ApplicationSettings.TORRENT_NAME_FILTER_REJECT, "");
+				_TorrentNameFilter = Strings.ReplaceCharacters(value, ApplicationSettings.TORRENT_NAME_FILTER_REJECT, "");
 				onPropertyChanged("TitleFilter");
 				RegexPattern = TorrentNameFilter;
 			}

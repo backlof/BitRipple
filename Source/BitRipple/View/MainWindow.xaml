@@ -69,7 +69,7 @@
 
 		<sys:Double x:Key="MinColumnWidth">50</sys:Double>
 
-		<CollectionViewSource x:Key="Filters" Source="{Binding Path=Filters}" >
+		<CollectionViewSource x:Key="Filters" Source="{Binding Path=Filters}" IsLiveSortingRequested="True" >
 			<CollectionViewSource.SortDescriptions>
 				<scm:SortDescription PropertyName="Title" />
 			</CollectionViewSource.SortDescriptions>
@@ -81,7 +81,7 @@
 			</CollectionViewSource.SortDescriptions>
 		</CollectionViewSource>
 
-		<CollectionViewSource x:Key="Feeds" Source="{Binding Path=Feeds}" >
+		<CollectionViewSource x:Key="Feeds" Source="{Binding Path=Feeds}" IsLiveSortingRequested="True" >
 			<CollectionViewSource.SortDescriptions>
 				<scm:SortDescription PropertyName="Title" />
 			</CollectionViewSource.SortDescriptions>
