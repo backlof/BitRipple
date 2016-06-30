@@ -30,7 +30,6 @@ namespace BitRipple.ViewModel
 			onPropertyChanged("TorrentDropDirectory");
 
 			StartTimer();
-			Update();
 		}
 
 		public ApplicationService Application { get; set; }
@@ -271,7 +270,6 @@ namespace BitRipple.ViewModel
 		private async void Update()
 		{
 			IsUpdating = true; NotifyLoading();
-
 
 			bool hasDownloaded = await Application.Update();
 
