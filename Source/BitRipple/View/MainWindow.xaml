@@ -112,49 +112,49 @@
 
 			<StatusBarItem ToolTip="Last update">
 				<StackPanel>
-					<Image Source="/Resources/FamFamFamSilk/Date_Previous.png" />
+					<Image Source="/Resources/Images/Date_Previous.png" />
 					<TextBlock Text="{Binding Path=LastUpdate, Converter={StaticResource DateConverter}, ConverterParameter=T}" />
 				</StackPanel>
 			</StatusBarItem>
 
 			<StatusBarItem ToolTip="Next update">
 				<StackPanel>
-					<Image Source="/Resources/FamFamFamSilk/Date_Next.png" />
+					<Image Source="/Resources/Images/Date_Next.png" />
 					<TextBlock Text="{Binding Path=NextUpdate, Converter={StaticResource DateConverter}, ConverterParameter=T}" />
 				</StackPanel>
 			</StatusBarItem>
 
 			<StatusBarItem ToolTip="Total updates">
 				<StackPanel>
-					<Image Source="/Resources/FamFamFamSilk/Arrow_Refresh_Small.png" />
+					<Image Source="/Resources/Images/Arrow_Refresh_Small.png" />
 					<TextBlock Text="{Binding Path=CountUpdates}" />
 				</StackPanel>
 			</StatusBarItem>
 
 			<StatusBarItem ToolTip="Filters">
 				<StackPanel>
-					<Image Source="/Resources/FamFamFamSilk/Table.png" />
+					<Image Source="/Resources/Images/Table.png" />
 					<TextBlock Text="{Binding Path=Filters.Count}" />
 				</StackPanel>
 			</StatusBarItem>
 
 			<StatusBarItem ToolTip="Feeds">
 				<StackPanel>
-					<Image Source="/Resources/FamFamFamSilk/Feed.png" />
+					<Image Source="/Resources/Images/Feed.png" />
 					<TextBlock Text="{Binding Path=Feeds.Count}" />
 				</StackPanel>
 			</StatusBarItem>
 
 			<StatusBarItem ToolTip="Downloads">
 				<StackPanel>
-					<Image Source="/Resources/FamFamFamSilk/Drive_Web.png" />
+					<Image Source="/Resources/Images/Drive_Web.png" />
 					<TextBlock Text="{Binding Path=DownloadedTorrents.Count}" />
 				</StackPanel>
 			</StatusBarItem>
 
 			<StatusBarItem ToolTip="Latest download">
 				<StackPanel>
-					<Image Source="/Resources/Diagona/193.png" />
+					<Image Source="/Resources/Images/193.png" />
 					<TextBlock Text="{Binding Path=LatestDownload}" />
 				</StackPanel>
 			</StatusBarItem>
@@ -193,7 +193,7 @@
 				<ToolBar Band="{Binding Path=Window.SaveBand, Mode=TwoWay}" BandIndex="{Binding Path=Window.SaveBandIndex, Mode=TwoWay}" ToolTip="Save your settings now" >
 					<Button Command="{Binding Path=SaveCommand}">
 						<WrapPanel>
-							<Image Source="/Resources/FamFamFamSilk/Disk.png" />
+							<Image Source="/Resources/Images/Disk.png" />
 							<TextBlock Style="{StaticResource ImageButtonTextBlock}" Text="Save" />
 						</WrapPanel>
 					</Button>
@@ -202,7 +202,7 @@
 				<ToolBar Band="{Binding Path=Window.BrowseBand, Mode=TwoWay}" BandIndex="{Binding Path=Window.BrowseBandIndex, Mode=TwoWay}" ToolTip="Folder to drop torrents in" >
 					<Button Command="{Binding Path=ChooseDirectory}">
 						<WrapPanel>
-							<Image Source="/Resources/FamFamFamSilk/Folder_Magnify.png" />
+							<Image Source="/Resources/Images/Folder_Magnify.png" />
 							<TextBlock Style="{StaticResource ImageButtonTextBlock}" Text="Browse" />
 						</WrapPanel>
 					</Button>
@@ -223,7 +223,7 @@
 				<ToolBar Band="{Binding Path=Window.UpdateBand, Mode=TwoWay}" BandIndex="{Binding Path=Window.UpdateBandIndex, Mode=TwoWay}" ToolTip="Update now"  >
 					<Button Command="{Binding Path=UpdateCommand}">
 						<WrapPanel>
-							<Image Source="/Resources/FamFamFamSilk/Arrow_Refresh_Small.png" />
+							<Image Source="/Resources/Images/Arrow_Refresh_Small.png" />
 							<TextBlock Style="{StaticResource ImageButtonTextBlock}" Text="Update" />
 						</WrapPanel>
 					</Button>
@@ -269,12 +269,12 @@
 							<ContextMenu>
 								<MenuItem Header="New" Command="{Binding Path=CreateFilterCommand}" CommandParameter="{Binding Path=PlacementTarget.SelectedItem, RelativeSource={RelativeSource AncestorType=ContextMenu}}" >
 									<MenuItem.Icon>
-										<Image Source="/Resources/FamFamFamSilk/Table_Add.png" />
+										<Image Source="/Resources/Images/Table_Add.png" />
 									</MenuItem.Icon>
 								</MenuItem>
 								<MenuItem Header="Remove" Command="{Binding Path=DeleteFilterCommand}" CommandParameter="{Binding Path=PlacementTarget.SelectedItem, RelativeSource={RelativeSource AncestorType=ContextMenu}}" >
 									<MenuItem.Icon>
-										<Image Source="/Resources/FamFamFamSilk/Table_Delete.png" />
+										<Image Source="/Resources/Images/Table_Delete.png" />
 									</MenuItem.Icon>
 								</MenuItem>
 							</ContextMenu>
@@ -401,17 +401,17 @@
 							<ContextMenu>
 								<MenuItem Header="New" Command="{Binding Path=CreateFeedCommand}"  CommandParameter="{Binding Path=PlacementTarget.SelectedItem, RelativeSource={RelativeSource AncestorType=ContextMenu}}" >
 									<MenuItem.Icon>
-										<Image Source="/Resources/FamFamFamSilk/Feed_Add.png" />
+										<Image Source="/Resources/Images/Feed_Add.png" />
 									</MenuItem.Icon>
 								</MenuItem>
 								<MenuItem Header="Edit" Command="{Binding Path=EditFeedCommand}" CommandParameter="{Binding Path=PlacementTarget.SelectedItem, RelativeSource={RelativeSource AncestorType=ContextMenu}}" >
 									<MenuItem.Icon>
-										<Image Source="/Resources/FamFamFamSilk/Feed_Edit.png" />
+										<Image Source="/Resources/Images/Feed_Edit.png" />
 									</MenuItem.Icon>
 								</MenuItem>
 								<MenuItem Header="Remove" Command="{Binding Path=DeleteFeedCommand}" CommandParameter="{Binding Path=PlacementTarget.SelectedItem, RelativeSource={RelativeSource AncestorType=ContextMenu}}" >
 									<MenuItem.Icon>
-										<Image Source="/Resources/FamFamFamSilk/Feed_Delete.png" />
+										<Image Source="/Resources/Images/Feed_Delete.png" />
 									</MenuItem.Icon>
 								</MenuItem>
 							</ContextMenu>
@@ -446,7 +446,7 @@
 							<ContextMenu >
 								<MenuItem Header="Download" Command="{Binding Path=ManuallyDownloadTorrentsCommand}" CommandParameter="{Binding Path=PlacementTarget.SelectedItems, RelativeSource={RelativeSource AncestorType=ContextMenu}}" >
 									<MenuItem.Icon>
-										<Image Source="/Resources/FamFamFamSilk/World_Add.png" />
+										<Image Source="/Resources/Images/World_Add.png" />
 									</MenuItem.Icon>
 								</MenuItem>
 							</ContextMenu>
@@ -489,7 +489,7 @@
 							<ContextMenu >
 								<MenuItem Header="Remove" Command="{Binding Path=RemoveDownloadsCommand}" CommandParameter="{Binding Path=PlacementTarget.SelectedItems, RelativeSource={RelativeSource AncestorType=ContextMenu}}">
 									<MenuItem.Icon>
-										<Image Source="/Resources/FamFamFamSilk/World_Delete.png" />
+										<Image />
 									</MenuItem.Icon>
 								</MenuItem>
 							</ContextMenu>

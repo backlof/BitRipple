@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfFilter xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/BitRipple.Model">
+  <Filter>
+    <Enabled>false</Enabled>
+    <Episode>1</Episode>
+    <Exclude>SD;480p;720p</Exclude>
+    <FeedIndex>-1</FeedIndex>
+    <Filter></Filter>
+    <IgnoreCaps>true</IgnoreCaps>
+    <Include>1080p</Include>
+    <MatchOnce>true</MatchOnce>
+    <Season>1</Season>
+    <TV>false</TV>
+    <Title>HD filter</Title>
+  </Filter>
+  <Filter>
+    <Enabled>false</Enabled>
+    <Episode>1</Episode>
+    <Exclude></Exclude>
+    <FeedIndex>-1</FeedIndex>
+    <Filter></Filter>
+    <IgnoreCaps>true</IgnoreCaps>
+    <Include></Include>
+    <MatchOnce>true</MatchOnce>
+    <Season>1</Season>
+    <TV>false</TV>
+    <Title>New filter</Title>
+  </Filter>
+</ArrayOfFilter>
