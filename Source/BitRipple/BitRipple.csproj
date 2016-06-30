@@ -81,8 +81,8 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="Xceed.Wpf.Toolkit, Version=2.9.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Extended.Wpf.Toolkit.2.9\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\Xceed.Wpf.Toolkit.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -170,10 +170,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Assemblies\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Assemblies\Xceed.Wpf.Toolkit.dll" />
     <Content Include="Resources\100Flat2\License.txt" />
     <Content Include="Resources\100Flat2\RSS.ico" />
     <Content Include="Resources\3dSocial\License.txt" />
