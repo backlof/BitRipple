@@ -59,55 +59,5 @@ namespace BitRipple.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        public static System.Drawing.Icon _100Flat2 {
-            get {
-                object obj = ResourceManager.GetObject("_100Flat2", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        public static System.Drawing.Icon _3dSocial {
-            get {
-                object obj = ResourceManager.GetObject("_3dSocial", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        public static System.Drawing.Icon LongShadowMedia {
-            get {
-                object obj = ResourceManager.GetObject("LongShadowMedia", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        public static System.Drawing.Icon ModernWeb {
-            get {
-                object obj = ResourceManager.GetObject("ModernWeb", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        public static System.Drawing.Icon Windows8Metro {
-            get {
-                object obj = ResourceManager.GetObject("Windows8Metro", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
     }
 }
