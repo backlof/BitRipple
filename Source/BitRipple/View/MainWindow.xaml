@@ -88,6 +88,12 @@
 		</CollectionViewSource>
 
 
+		<CollectionViewSource x:Key="Downloads" Source="{Binding Path=DownloadedTorrents}" >
+			<CollectionViewSource.SortDescriptions>
+				<scm:SortDescription PropertyName="Download.TimeOfDownload" Direction="Descending"/>
+			</CollectionViewSource.SortDescriptions>
+		</CollectionViewSource>
+		
 	</Window.Resources>
 
 
@@ -473,7 +479,7 @@
 
 			<!-- DOWNLOADED TAB -->
 
-			<TabItem Header="Downloaded">
+			<TabItem Header="Downloads">
 				<Grid>
 
 					<!-- DOWNLOADED TABLE -->
@@ -484,12 +490,12 @@
 					         Width="{Binding Path=Window.FilterWidthDownloaded, Mode=TwoWay}"/>
 
 
-					<DataGrid x:Name="DownloadsDataGrid" ItemsSource="{Binding Path=DownloadedTorrents}" CanUserResizeRows="False" >
+					<DataGrid x:Name="DownloadsDataGrid" ItemsSource="{Binding Source={StaticResource Downloads}}" CanUserResizeRows="False" >
 						<DataGrid.ContextMenu>
 							<ContextMenu >
 								<MenuItem Header="Remove" Command="{Binding Path=RemoveDownloadsCommand}" CommandParameter="{Binding Path=PlacementTarget.SelectedItems, RelativeSource={RelativeSource AncestorType=ContextMenu}}">
 									<MenuItem.Icon>
-										<Image />
+										<Image Source="/Resources/Images/World_Delete.png" />
 									</MenuItem.Icon>
 								</MenuItem>
 							</ContextMenu>

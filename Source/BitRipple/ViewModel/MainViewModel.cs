@@ -579,36 +579,6 @@ namespace BitRipple.ViewModel
 		}
 		#endregion
 
-		#region Remove Downloaded Torrent COMMAND
-		public ICommand RemoveDownloadedTorrentCommand
-		{
-			get
-			{
-				return new RelayCommand(ExecuteRemoveDownloadedTorrentCommand, CanRemoveDownloadedTorrentCommand);
-			}
-		}
-
-		public void ExecuteRemoveDownloadedTorrentCommand(object parameter)
-		{
-			var indexOfSelectedItems = parameter as IList<int>;
-			foreach (var index in indexOfSelectedItems)
-			{
-				Application.DownloadedTorrents.RemoveAt(index);
-			}
-
-			// Get more than 1 from commands
-			// http://stackoverflow.com/questions/6398046/wpf-datagrid-remove-selecteditems
-			// http://stackoverflow.com/questions/18257516/how-to-pass-listbox-selecteditem-as-command-parameter-in-a-button
-			// http://stackoverflow.com/questions/25452189/pass-selected-item-as-command-parameter-vs-using-a-bound-viewmodel-object-mvvm
-		}
-
-		public bool CanRemoveDownloadedTorrentCommand(object parameter)
-		{
-			var indexOfSelectedItems = parameter as IList<int>;
-			return indexOfSelectedItems.Count > 0;
-		}
-		#endregion
-
 		#region Manual Update COMMAND
 		public ICommand UpdateCommand
 		{
@@ -838,6 +808,7 @@ namespace BitRipple.ViewModel
 			{
 				DownloadedTorrents.Remove(torrent);
 			}
+			onPropertyChanged("LatestDownload");
 		}
 
 		public bool CanRemoveDownloadsCommand(object parameter)
