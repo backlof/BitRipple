@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<State xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/BitRipple.Model">
-  <CountUpdates>3</CountUpdates>
-  <LastUpdate>2016-06-30T23:33:07.3782556+02:00</LastUpdate>
-  <SelectedFeedIndex>-1</SelectedFeedIndex>
-  <SelectedFilterIndex>-1</SelectedFilterIndex>
-  <SelectedUpdateFrequency>4</SelectedUpdateFrequency>
-  <TorrentDropDirectory>Torrents\</TorrentDropDirectory>
-</State>
