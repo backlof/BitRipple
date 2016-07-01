@@ -176,11 +176,6 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Assemblies\Xceed.Wpf.Toolkit.dll" />
-    <Content Include="Licenses">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Resource Include="Resources\Icons\100Flat2.ico" />
-    <Resource Include="Resources\Icons\3dSocial.ico" />
     <Resource Include="Resources\Images\193.png" />
     <Resource Include="Resources\Images\Arrow_Refresh_Small.png" />
     <Resource Include="Resources\Images\Date_Next.png" />
@@ -197,9 +192,7 @@
     <Resource Include="Resources\Images\Table_Delete.png" />
     <Resource Include="Resources\Images\World_Add.png" />
     <Resource Include="Resources\Images\World_Delete.png" />
-    <Resource Include="Resources\Icons\LongShadowMedia.ico" />
     <Resource Include="Resources\Icons\ModernWeb.ico" />
-    <Resource Include="Resources\Icons\Windows8Metro.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
