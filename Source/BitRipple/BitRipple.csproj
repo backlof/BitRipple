@@ -210,14 +210,26 @@
   <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release'">
     <Exec Command="$(PostAfterBuildEvent)" />
   </Target>
+  <Target Name="BeforeBuild" Condition="'$(Configuration)' == 'Release'">
+    <Exec Command="$(BeforeBuildEvent)" />
+  </Target>
   <PropertyGroup>
+    <BeforeBuildEvent>
+      rmdir /s /q "$(TargetDir)..\..\..\..\Distribute"
+    </BeforeBuildEvent>
+    <PreBuildEvent>
+      if $(ConfigurationName) == Release (
+      del /s /q "*"
+      rmdir /s /q "*"
+      )
+    </PreBuildEvent>
     <PostBuildEvent>
       rd /s /q "de", "en", "es", "fr", "it", "ja", "ko", "ru", "zh-Hans", "zh-Hant"
       rd /s /q "hu", "pt-BR", "sv", "ro"
       del /s /q "Ninject.xml"
+      del /s /q "*.pdb"
       mkdir "$(TargetDir)Assemblies"
       move /y "$(TargetDir)*.dll" "$(TargetDir)Assemblies"
-      del /s /q "*.pdb"
     </PostBuildEvent>
     <PostAfterBuildEvent>
       mkdir "$(TargetDir)..\..\..\..\Distribute"
